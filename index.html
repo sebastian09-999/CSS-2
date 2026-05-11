@@ -1,0 +1,270 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabla de Usuarios</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>Lista de Usuarios</h1>
+
+    <table border="1">
+
+        <caption>
+            Información general de los usuarios registrados
+        </caption>
+
+        <thead>
+            <tr>
+                <th colspan="2">Identificación</th>
+                <th colspan="2">Información Personal</th>
+                <th rowspan="2">Edad</th>
+                <th rowspan="2">Correo</th>
+                <th rowspan="2">Teléfono</th>
+                <th rowspan="2">Ciudad</th>
+                <th rowspan="2">País</th>
+                <th rowspan="2">Ocupación</th>
+                <th rowspan="2">Estado</th>
+            </tr>
+
+            <tr>
+                <th>ID</th>
+                <th>Foto</th>
+                <th>Nombre</th>
+                <th>Apellido</th>
+            </tr>
+        </thead>
+
+        <tbody>
+
+            <tr>
+                <td>1</td>
+
+                <td>
+                    <img src="https://i.pravatar.cc/50?img=1" alt="Usuario 1">
+                </td>
+
+                <td class="texto-rojo">Juan</td>
+
+                <td>Pérez</td>
+
+                <td>25</td>
+
+                <td>juan@gmail.com</td>
+
+                <td>3001234567</td>
+
+                <td>Bogotá</td>
+
+                <td rowspan="2">Colombia</td>
+
+                <td class="texto-cursiva">Diseñador</td>
+
+                <td>Activo</td>
+            </tr>
+
+            <tr>
+                <td>2</td>
+
+                <td>
+                    <img src="https://i.pravatar.cc/50?img=2" alt="Usuario 2">
+                </td>
+
+                <td>Ana</td>
+
+                <td class="texto-negrita">Gómez</td>
+
+                <td>30</td>
+
+                <td>ana@gmail.com</td>
+
+                <td>3019876543</td>
+
+                <td>Medellín</td>
+
+                <td>Ingeniera</td>
+
+                <td>Activo</td>
+            </tr>
+
+            <tr>
+                <td>3</td>
+
+                <td>
+                    <img src="https://i.pravatar.cc/50?img=3" alt="Usuario 3">
+                </td>
+
+                <td>Carlos</td>
+
+                <td>Ruiz</td>
+
+                <td>28</td>
+
+                <td colspan="2" >
+                    contacto_carlos@gmail.com
+                </td>
+
+                <td>Cali</td>
+
+                <td>Colombia</td>
+
+                <td>Programador</td>
+
+                <td>Inactivo</td>
+            </tr>
+
+            <tr>
+                <td>4</td>
+
+                <td>
+                    <img src="https://i.pravatar.cc/50?img=4" alt="Usuario 4">
+                </td>
+
+                <td>Laura</td>
+
+                <td>Martínez</td>
+
+                <td>22</td>
+
+                <td>laura@gmail.com</td>
+
+                <td>3206549871</td>
+
+                <td>Barranquilla</td>
+
+                <td>Colombia</td>
+
+                <td >Estudiante</td>
+
+                <td>Activo</td>
+            </tr>
+
+            <tr>
+                <td>5</td>
+
+                <td>
+                    <img src="https://i.pravatar.cc/50?img=5" alt="Usuario 5">
+                </td>
+
+                <td>Pedro</td>
+
+                <td>López</td>
+
+                <td>35</td>
+
+                <td>pedro@gmail.com</td>
+
+                <td>3112589634</td>
+
+                <td>Cartagena</td>
+
+                <td>Colombia</td>
+
+                <td>Administrador</td>
+
+                <td class="texto-azul">Activo</td>
+            </tr>
+
+        </tbody>
+
+        <tfoot>
+            <tr>
+                <td colspan="11">
+                    Total de usuarios registrados: 5
+                </td>
+            </tr>
+        </tfoot>
+
+    </table>
+
+</body>
+</html>
+
+    <!-- Agrega una clase a cada tabla -->
+
+<table border="1" class="tabla-izquierda">
+</table>
+
+<table border="1" class="tabla-centro">
+</table>
+
+<table border="1" class="tabla-derecha">
+</table>
+
+<div class="contenedor-columnas">
+    
+    <!-- TABLA IZQUIERDA -->
+    <table border="1" class="tabla-izq">
+        <caption>Tabla Izquierda</caption>
+        <thead>
+            <tr><th>Dato</th><th>Valor</th></tr>
+        </thead>
+        <tbody>
+            <tr><td>User</td><td>A</td></tr>
+        </tbody>
+    </table>
+
+    <!-- TABLA DERECHA (Se coloca antes en el HTML para que el float funcione mejor) -->
+    <table border="1" class="tabla-der">
+        <caption>Tabla Derecha</caption>
+        <thead>
+            <tr><th>Dato</th><th>Valor</th></tr>
+        </thead>
+        <tbody>
+            <tr><td>User</td><td>C</td></tr>
+        </tbody>
+    </table>
+
+    <!-- TABLA CENTRO -->
+    <table border="1" class="tabla-cen">
+        <caption>Tabla Centro</caption>
+        <thead>
+            <tr><th>Dato</th><th>Valor</th></tr>
+        </thead>
+        <tbody>
+            <tr><td>User</td><td>B</td></tr>
+        </tbody>
+    </table>
+
+</div>
+
+ <h1 class="solid">Border Solid</h1>
+
+    <h1 class="dotted">Border Dotted</h1>
+
+    <h1 class="dashed">Border Dashed</h1>
+
+    <h1 class="double">Border Double</h1>
+
+    <h1 class="groove">Border Groove</h1>
+
+    <h1 class="ridge">Border Ridge</h1>
+
+    <h1 class="inset">Border Inset</h1>
+
+    <h1 class="outset">Border Outset</h1>
+
+    <h1 class="none">Border None</h1>
+
+    <h1 class="hidden">Border Hidden</h1>
+
+    <h1 class="bordes-diferentes">diferentes bordes</h1>
+
+     <div class="caja auto">
+        <h1>auto</h1>
+    </div>
+
+    <div class="caja cover">
+        <h1>cover</h1>
+    </div>
+
+    <div class="caja contain">
+        <h1>contain</h1>
+    </div>
+
+  
+</body>
+</html>
