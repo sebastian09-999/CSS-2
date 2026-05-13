@@ -58,7 +58,7 @@ tfoot td {
     padding: 12px;
 }
 
-img {
+.foto-perfil {
     width: 50px;
     height: 50px;
     border-radius: 50%;
@@ -284,3 +284,87 @@ h1 {
     background-size: contain;
 }
 
+/* ================================================
+   ESCENA: el contenedor que apila todas las capas
+   ================================================ */
+.escena {
+  position: relative;           /* ancla todas las capas hijas */
+  width: min(860px, 94vw);
+  height: clamp(380px, 55vw, 520px);
+  border-radius: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: hidden;
+  box-shadow:
+    0 0 0 1px rgba(120, 180, 255, 0.15),
+    0 0 60px rgba(60, 100, 200, 0.25),
+    0 30px 80px rgba(0, 0, 10, 0.9);
+}
+
+/* ================================================
+   CAPAS DE IMAGEN
+   Todas ocupan el 100% de la escena con position absolute.
+   La profundidad (z-index) determina el orden visual.
+   mix-blend-mode hace que se "fusionen" entre sí.
+   ================================================ */
+.capa {
+  position: absolute;
+  inset: 0;                     /* top:0 right:0 bottom:0 left:0 */
+  width: 100%;
+  height: 100%;
+}
+
+.capa img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+/* --- CAPA FONDO: galaxia base, totalmente opaca --- */
+.capa-fondo {
+  z-index: 1;
+  opacity: 1;
+}
+
+/* --- CAPA MEDIA: nebulosa encima, se mezcla con "screen"
+       screen: los píxeles claros de la nebulosa iluminan el fondo
+       como si fueran nubes de gas reales sobre las estrellas --- */
+.capa-media {
+  z-index: 2;
+  opacity: 0.75;
+  mix-blend-mode: screen;
+  animation: pulso 8s ease-in-out infinite alternate;
+}
+
+/* --- CAPA FRENTE: planeta con "luminosity" para que tome
+       los colores del espacio de abajo y parezca parte de él --- */
+.capa-frente {
+  z-index: 3;
+  opacity: 0.65;
+  mix-blend-mode: luminosity;
+  animation: deriva 14s ease-in-out infinite alternate;
+}
+
+
+.fondo-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  overflow: hidden;
+}
+
+.fondo-video video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1.10); /* cambia 0.7 para alejar o acercar */
+  width: 100vw;
+  height: 100vh;
+  object-fit: contain;  /* contain = muestra el video completo sin recortar */
+  pointer-events: none;
+}
