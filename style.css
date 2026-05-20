@@ -347,24 +347,206 @@ h1 {
   animation: deriva 14s ease-in-out infinite alternate;
 }
 
-
-.fondo-video {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-  overflow: hidden;
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    max-width: 800px;
+    margin: 0 auto;
 }
 
-.fondo-video video {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) scale(1.10); /* cambia 0.7 para alejar o acercar */
-  width: 100vw;
-  height: 100vh;
-  object-fit: contain;  /* contain = muestra el video completo sin recortar */
-  pointer-events: none;
+/* --- Estilo Base de las Cajas --- */
+.box {
+    background-image: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80');
+    background-size: cover;
+    background-position: center;
+    
+    /* Importante: les damos una altura fija y scroll interno */
+    height: 300px;
+    overflow-y: scroll;
+    
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+    
+    /* Añadimos un color de texto claro y sombra para leer bien sobre la imagen */
+    color: white;
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.8);
+}
+
+.box h2 {
+    margin-bottom: 10px;
+    background: rgba(0, 0, 0, 0.4);
+    display: inline-block;
+    padding: 2px 8px;
+    border-radius: 4px;
+}
+
+/* Espaciador para forzar el scroll dentro de la caja */
+.dummy-text {
+    margin-top: 200px;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.dummy-text p {
+    margin-bottom: 15px;
+}
+
+/* --- La Clave del Ejemplo: Aplicación de background-attachment --- */
+
+.scroll {
+    background-attachment: scroll;
+}
+
+.local {
+    background-attachment: local;
+}
+
+.fixed {
+    background-attachment: fixed;
+}
+
+.gradient-box {
+    width: 450px;
+    height: 250px;
+    border-radius: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    
+    /* --- AQUÍ ESTÁ EL DEGRADADO DE 4 COLORES --- */
+    background: linear-gradient(200deg, #07485a , #73a0d8 , #a84299 , #ee8368);
+}
+
+.gradient-box h2 {
+    color: white;
+    font-size: 1.8rem;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+.ejercicio{
+    margin: 50px;
+    width: 400px;
+    height: 200px;
+    background: linear-gradient(25deg, #f50b0b , #f7f7f7 , #001fce);
+
+}
+
+.radial{
+    width: 400px;
+    height: 200px;
+    background-image: radial-gradient(circle closest-side at 20%,rgb(61, 32, 129), rgb(64, 12, 85), rgb(0, 0, 0));
+}
+.radia2{
+    width: 400px;
+    height: 200px;
+    background-image: radial-gradient(circle farthest-side at 20%,rgb(61, 32, 129), rgb(64, 12, 85), rgb(0, 0, 0));
+}
+.radial3{
+    width: 400px;
+    height: 200px;
+    background-image: radial-gradient(ellipse farthest-corner at 20%,rgb(61, 32, 129), rgb(64, 12, 85), rgb(0, 0, 0));
+}
+.radial4{
+    width: 400px;
+    height: 200px;
+    background-image: radial-gradient(circle closest-corner at 20%,rgb(61, 32, 129), rgb(64, 12, 85), rgb(0, 0, 0));
+}
+
+.repet{
+    width: 200px;
+    height: 200px;
+    background-image: repeating-radial-gradient(RED,BLUE 10%);
+}
+
+.c{
+    height: 100px;
+    width: 100px;
+    background-image: radial-gradient(50px at 50% 100%, #1f001f, #5b005b,#870160, #ac255e, #ca485c, black);
+    background-position: 0 0, 50px 0;
+}
+
+.conic{
+    margin: 50px;
+    width: 400px;
+    height: 200px;
+    background: conic-gradient(black ,rgb(255, 255, 255), black )
+
+
+
+    
+}
+.landscape-container {
+    width: 900px;
+    height: 480px;
+    border: 2px solid #000;
+}
+
+/* CIELO */
+.sky {
+    height: 55%;
+    background: linear-gradient(to bottom, #e67e22, #f1c40f);
+    position: relative;
+}
+
+/* SOL */
+.sun {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+
+    position: absolute;
+
+    bottom: -70px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    background: radial-gradient(
+        circle,
+        rgba(255,255,255,1) 10%,
+        rgba(255,255,255,0.8) 40%,
+        rgba(255,255,255,0) 78%
+    );
+
+    z-index: 0;
+}
+
+
+
+/* MAR */
+.sea{
+
+    height: 25%;
+
+    background-color: #2980b9;
+
+    background-image: linear-gradient(
+        90deg,
+        #2980b9 0%,
+        #2980b9 35%,
+        rgba(255,255,255,0.08) 42%,
+        rgba(255,255,255,0.35) 48%,
+        rgba(255,255,255,0.55) 50%,
+        rgba(255,255,255,0.35) 52%,
+        rgba(255,255,255,0.08) 58%,
+        #2980b9 65%,
+        #2980b9 100%
+    );
+
+    position: relative;
+
+    overflow: hidden;
+}
+/* ARENA */
+.sand {
+    height: 20%;
+
+    background: linear-gradient(
+        to bottom,
+        #966849 0%,
+        #976437 20%,
+        #e4c89b 100%
+    );
 }

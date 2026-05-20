@@ -8,11 +8,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div class="fondo-video">
-  <video autoplay muted loop playsinline>
-    <source src="fondo.mp4" type="video/mp4">
-  </video>
-</div>
+
 
     <h1>Lista de Usuarios</h1>
 
@@ -270,24 +266,109 @@
         <h1>contain</h1>
     </div>
 
-     <div class="escena">
+    <div class="escena">
 
-    <!-- CAPA 0: imagen de fondo (la más profunda) -->
+    <!-- CAPA 0: imagen de fondo -->
     <div class="capa capa-fondo">
-      <img src="persona.jfif" alt="galaxia fondo"/>
+        <img src="persona.jfif" alt="galaxia fondo"/>
     </div>
 
-    <!-- CAPA 1: nebulosa encima del fondo -->
+    <!-- CAPA 1 -->
     <div class="capa capa-media">
-      <img src="nebulosa.jfif" alt="nebulosa"/>
+        <img src="nebulosa.jfif" alt="nebulosa"/>
     </div>
 
-    <!-- CAPA 2: planeta / primer plano (la más cercana) -->
+    <!-- CAPA 2 -->
     <div class="capa capa-frente">
-      <img src="planeta.jfif" alt="planeta"/>
+        <img src="planeta.jfif" alt="planeta"/>
     </div>
 
+</div> <!-- ← CERRAR escena AQUÍ -->
 
-  
+
+<!-- FIXED -->
+<main class="container">
+        
+        <!-- Tarjeta con scroll -->
+        <section class="box scroll">
+            <h2>background-attachment: scroll</h2>
+            <p><strong>Comportamiento:</strong> El fondo está fijo respecto al contenedor. Si haces scroll en la página, el fondo se mueve con la tarjeta. Pero si haces scroll <em>dentro</em> de la tarjeta, el fondo se queda quieto y solo se mueve el texto.</p>
+            <div class="dummy-text">
+                <p>Sigue bajando dentro de esta caja...</p>
+                <p>¿Ves cómo la imagen de fondo no se mueve aunque el texto sí?</p>
+                <p>Este es el comportamiento por defecto en la web.</p>
+            </div>
+        </section>
+
+        <!-- Tarjeta con local -->
+        <section class="box local">
+            <h2>background-attachment: local</h2>
+            <p><strong>Comportamiento:</strong> El fondo está "atado" al contenido. Si haces scroll en la página, se mueve con la tarjeta. Si haces scroll <em>dentro</em> de la tarjeta, la imagen se desplaza junto con el texto.</p>
+            <div class="dummy-text">
+                <p>Sigue bajando dentro de esta caja...</p>
+                <p>¡Aquí la imagen se va hacia arriba con el texto!</p>
+                <p>Es ideal para contenidos largos donde el fondo forma parte del texto.</p>
+            </div>
+        </section>
+
+        <!-- Tarjeta con fixed -->
+        <section class="box fixed">
+            <h2>background-attachment: fixed</h2>
+            <p><strong>Comportamiento:</strong> El fondo está fijo respecto a la pantalla del navegador (viewport). No importa si haces scroll en la página o dentro de la caja: la imagen nunca se mueve. Actúa como una "ventana" que deja ver el fondo.</p>
+            <div class="dummy-text">
+                <p>Sigue bajando dentro de esta caja...</p>
+                <p>La imagen parece una pegatina pegada al fondo de tu monitor.</p>
+                <p>Nota: En algunos dispositivos móviles, este efecto puede estar desactivado por rendimiento.</p>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Este es el div con el degradado -->
+    <div class="gradient-box">
+        <h2>Degradado de 4 Colores</h2>
+    </div>
+
+    <div class="ejercicio">
+    </div>
+    <div class="radial">
+    </div>
+
+ <div class="radial"> 
+    </div>
+
+     <div class="radial2">  
+    </div>
+
+     <div class="radial3">  
+    </div>
+
+     <div class="radial4">
+    </div>
+
+    <div class="repet">
+    </div>
+
+    <div class="c">
+    </div>
+
+    <div class="conic">
+    </div>
+
+  <div class="landscape-container">
+        
+       
+            <div class="sky">
+                <div class="sun">
+                    
+                </div>
+            </div>
+            <div class="sea"></div>
+            <div class="sand"></div>
+        
+
+        
+
+    </div>
 </body>
 </html>
