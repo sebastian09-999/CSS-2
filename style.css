@@ -417,48 +417,63 @@ h1 {
     align-items: center;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
     
-    /* --- AQUÍ ESTÁ EL DEGRADADO DE 4 COLORES --- */
+   
     background: linear-gradient(200deg, #07485a , #73a0d8 , #a84299 , #ee8368);
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .gradient-box h2 {
     color: white;
     font-size: 1.8rem;
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    margin-left: auto;
+    margin-right: auto;
 }
 .ejercicio{
     margin: 50px;
     width: 400px;
     height: 200px;
     background: linear-gradient(25deg, #f50b0b , #f7f7f7 , #001fce);
-
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .radial{
     width: 400px;
     height: 200px;
     background-image: radial-gradient(circle closest-side at 20%,rgb(61, 32, 129), rgb(64, 12, 85), rgb(0, 0, 0));
+    margin-left: auto;
+    margin-right: auto;
 }
 .radia2{
     width: 400px;
     height: 200px;
     background-image: radial-gradient(circle farthest-side at 20%,rgb(61, 32, 129), rgb(64, 12, 85), rgb(0, 0, 0));
+    margin-left: auto;
+    margin-right: auto;
 }
 .radial3{
     width: 400px;
     height: 200px;
     background-image: radial-gradient(ellipse farthest-corner at 20%,rgb(61, 32, 129), rgb(64, 12, 85), rgb(0, 0, 0));
+    margin-left: auto;
+    margin-right: auto;
 }
 .radial4{
     width: 400px;
     height: 200px;
     background-image: radial-gradient(circle closest-corner at 20%,rgb(61, 32, 129), rgb(64, 12, 85), rgb(0, 0, 0));
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .repet{
     width: 200px;
     height: 200px;
     background-image: repeating-radial-gradient(RED,BLUE 10%);
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .c{
@@ -466,13 +481,18 @@ h1 {
     width: 100px;
     background-image: radial-gradient(50px at 50% 100%, #1f001f, #5b005b,#870160, #ac255e, #ca485c, black);
     background-position: 0 0, 50px 0;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .conic{
     margin: 50px;
     width: 400px;
     height: 200px;
-    background: conic-gradient(black ,rgb(255, 255, 255), black )
+    background: conic-gradient(black ,rgb(255, 255, 255), black );
+    margin-left: auto;
+    margin-right: auto;
+    
 
 
 
@@ -481,7 +501,10 @@ h1 {
 .landscape-container {
     width: 900px;
     height: 480px;
-    border: 2px solid #000;
+    border: 9px solid #000;
+    margin-left: auto;
+    margin-right: auto;
+    
 }
 
 /* CIELO */
@@ -516,27 +539,33 @@ h1 {
 
 
 /* MAR */
-.sea{
-
+.sea {
     height: 25%;
-
     background-color: #2980b9;
-
-    background-image: linear-gradient(
-        90deg,
-        #2980b9 0%,
-        #2980b9 35%,
-        rgba(255,255,255,0.08) 42%,
-        rgba(255,255,255,0.35) 48%,
-        rgba(255,255,255,0.55) 50%,
-        rgba(255,255,255,0.35) 52%,
-        rgba(255,255,255,0.08) 58%,
-        #2980b9 65%,
-        #2980b9 100%
-    );
+    
+    background-image: 
+        /* 1. EL REFLEJO CIRCULAR (Ahora mucho más intenso y amplio) */
+        radial-gradient(
+            ellipse at 50% 0%, 
+            rgba(255, 255, 255, 0.85) 0%,   /* Blanco casi sólido justo debajo del sol */
+            rgba(255, 255, 255, 0.4) 25%,    /* Brillo medio expandido */
+            rgba(255, 255, 255, 0) 70%       /* Desvanecimiento exterior */
+        ),
+        /* 2. EL CAMINO DE LUZ (Más marcado en el centro para darle cuerpo) */
+        linear-gradient(
+            90deg,
+            #0d80cc 0%,
+            #2279b3 35%,
+            rgba(255, 255, 255, 0.1) 43%,   /* Resplandor lateral suave */
+            rgba(255, 255, 255, 0.45) 48%,  /* Centro brillante */
+            rgba(255, 255, 255, 0.5) 50%,   /* Núcleo del reflejo */
+            rgba(255, 255, 255, 0.45) 52%,
+            rgba(255, 255, 255, 0.1) 57%,
+            #2279b3 65%,
+            #0d80cc 100%
+        );
 
     position: relative;
-
     overflow: hidden;
 }
 /* ARENA */
